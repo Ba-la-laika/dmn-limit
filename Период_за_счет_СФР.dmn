@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_B2C1B7B6-2287-4234-B1F7-2FEA2FE1C8E2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_C62DECAA-83FD-4509-B49F-13698DBD357B" name="Период_за_счет_СФР" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_B2C1B7B6-2287-4234-B1F7-2FEA2FE1C8E2">
+  <dmn:extensionElements/>
+  <dmn:decision id="_35283AFA-BEEB-4620-BC4C-0B4358832921" name="Периоды_после_ограничений">
+    <dmn:extensionElements/>
+    <dmn:variable id="_4CC11B40-0373-4375-ACC0-6D64FCB4BF84" name="Периоды_после_ограничений" typeRef="Any"/>
+    <dmn:context id="_6FD0A613-F7A3-4FC7-9A35-6361D78DEA6F">
+      <dmn:contextEntry>
+        <dmn:variable id="_1AAE13DF-C0BB-47D8-B7D4-9F4BC11B0976" name="входные_данные" typeRef="Any"/>
+        <dmn:literalExpression id="_ADCF1A60-1642-4EF5-B0ED-36F1999FC230">
+          <dmn:text>{
+	"дата_начала_СС": "2022-02-12",
+	"условия_исчисления": [
+		"44"
+	],
+	"периоды_ВН": [
+		{
+			"дата_начала": "2022-02-12",
+			"дата_окончания": "2022-02-18"
+		},
+		{
+			"дата_начала": "2022-02-19",
+			"дата_окончания": "2022-02-20"
+		}
+	],
+    "период_оплаты": 
+        {
+			"дата_начала": "2022-02-15",
+			"дата_окончания": "2022-02-20"
+		}
+}</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_A9DCD023-C03D-46EC-8883-785862628990">
+          <dmn:text>входные_данные</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_C765B279-915A-4D3E-815A-054C3341C586" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_6FD0A613-F7A3-4FC7-9A35-6361D78DEA6F">
+            <kie:width>50</kie:width>
+            <kie:width>120</kie:width>
+            <kie:width>1080</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_ADCF1A60-1642-4EF5-B0ED-36F1999FC230">
+            <kie:width>1080</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A9DCD023-C03D-46EC-8883-785862628990">
+            <kie:width>1080</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_35283AFA-BEEB-4620-BC4C-0B4358832921" dmnElementRef="_35283AFA-BEEB-4620-BC4C-0B4358832921" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="681" y="209" width="268" height="65"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
